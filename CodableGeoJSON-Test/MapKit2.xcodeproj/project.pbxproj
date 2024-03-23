@@ -16,6 +16,7 @@
 		1347BCAB2BADBE37003FF9D5 /* CountryProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1347BCAA2BADBE37003FF9D5 /* CountryProperties.swift */; };
 		13742D8E2BADA64F005FB4BA /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13742D8D2BADA64F005FB4BA /* SVGKit */; };
 		13742D902BADA64F005FB4BA /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13742D8F2BADA64F005FB4BA /* SVGKitSwift */; };
+		6CEDFDC52BAE91A100889783 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDFDC42BAE91A100889783 /* CountryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1329298D2BAC41C100AFF2B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1347BCA82BADBBB6003FF9D5 /* world.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
 		1347BCAA2BADBE37003FF9D5 /* CountryProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryProperties.swift; sourceTree = "<group>"; };
+		6CEDFDC42BAE91A100889783 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		1329297A2BAC41C000AFF2B1 = {
 			isa = PBXGroup;
 			children = (
+				6CEDFDC32BAE918E00889783 /* Model */,
 				132929852BAC41C000AFF2B1 /* MapKit2 */,
 				132929842BAC41C000AFF2B1 /* Products */,
 			);
@@ -77,6 +80,14 @@
 				1329298D2BAC41C100AFF2B1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6CEDFDC32BAE918E00889783 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CEDFDC42BAE91A100889783 /* CountryData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				1347BCAB2BADBE37003FF9D5 /* CountryProperties.swift in Sources */,
 				132929892BAC41C000AFF2B1 /* ContentView.swift in Sources */,
+				6CEDFDC52BAE91A100889783 /* CountryData.swift in Sources */,
 				132929872BAC41C000AFF2B1 /* MapKit2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapKit2/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GZP92B25;
+				DEVELOPMENT_TEAM = 3J5ZFK63VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -319,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapKit2/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GZP92B25;
+				DEVELOPMENT_TEAM = 3J5ZFK63VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
