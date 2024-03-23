@@ -31,108 +31,66 @@ struct ContentView: View {
     
     @State private var currentScale: CGFloat = 0
     @State private var finalScale: CGFloat = 1
+    @State private var showMainView = false
     
     var body: some View {
-        
+        @AppStorage("onboarding") var isOnboardingActive: Bool = true
         // JSON 데이터를 파싱하여 저장할 모델
         @State var countriesData: CountryData? = nil
         
-        Canvas(rendersAsynchronously: true) { context, size in
-            // as an example, I coloured Russia green
-            let drawer = GeoJSONMapDrawer(featureCollection: loadGeojson(),
-                                          colorDict: [
-                                            // the keys in this dictionary corresponds to the "id" property in each feature
-                                            "CN": .red
-                                          ])
-            drawer.drawMap(borderColor: .black,
-                           borderWidth: 1,
-                           size: size,
-                           context: context)
-        }
-        // from a quick google, 1.65 is apparently best for a mercator map
-        .aspectRatio(1.65, contentMode: .fit)
-        .scaleEffect(finalScale + currentScale)
-        .gesture(
-            MagnificationGesture().onChanged { newScale in
-                currentScale = newScale
-            }.onEnded{ scale in
-                finalScale = scale
-                currentScale = 0
-            }
-        )
-        .onTapGesture(coordinateSpace: .global) { location in
-            print("Tapped at \(location)")
-            
-            //world 데이터 연결
-            if let url = Bundle.main.url(forResource: "world", withExtension: "json") {
-                // JSON 파일이 있으므로 해당 URL을 사용하여 데이터를 읽을 수 있음
-                do {
-                    let jsonData = try Data(contentsOf: url)
-                    // jsonData를 사용하여 원하는 작업을 수행
-                    
-                    do {
-                        countriesData = try JSONDecoder().decode(CountryData.self, from: jsonData)
-                        print("countriesData: \(countriesData)")
-                        
-                        if let countriesData = countriesData {
-                            let result = findNearestCountryName(to: location, countriesData: countriesData)
-                            
-                            print("결과:")
-                            print(result)
-                            
-                        } else {
-                            print("countriesData is nil")
-                        }
-                    } catch {
-                        print("Error decoding JSON: \(error)")
-                    }
-                } catch {
-                    print("Error reading JSON file:", error)
-                }
-            } else {
-                print("JSON file not found")
-            }
-        }
+        ZStack {
+                   if showMainView {
+                      
+                       Canvas(rendersAsynchronously: true) { context, size in
+                           // as an example, I coloured Russia green
+                           let drawer = GeoJSONMapDrawer(featureCollection: loadGeojson(),
+                                                         colorDict: [
+                                                           // the keys in this dictionary corresponds to the "id" property in each feature
+                                                           "RU": .red,
+                                                           "US": .blue,
+                                                           "AU": .yellow
+                                                         ])
+                           drawer.drawMap(borderColor: .black,
+                                          borderWidth: 1,
+                                          size: size,
+                                          context: context)
+                       }
+                       // from a quick google, 1.65 is apparently best for a mercator map
+                       .aspectRatio(1.65, contentMode: .fit)
+                       .scaleEffect(finalScale + currentScale)
+                       .gesture(
+                           MagnificationGesture().onChanged { newScale in
+                               currentScale = newScale
+                           }.onEnded{ scale in
+                               finalScale = scale
+                               currentScale = 0
+                           }
+                       )
+                       .onTapGesture(coordinateSpace: .global) { location in
+                           print("Tapped at \(location)")
+                           
+                         
+                       }
+                       
+                       
+                   } else {
+                       SplashView()
+                           .onAppear {
+                               DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                   withAnimation {
+                                       showMainView = true
+                                   }
+                               }
+                           }
+                   }
+               }
+        
+
 
         
-        
     }
     
-    
-    // 가장 가까운 좌표를 찾아 해당하는 국가 이름 반환
-    func findNearestCountryName(to point: CGPoint, countriesData: CountryData) -> String? {
-        
-        var nearestCountryName: String? = nil
-        var minDistance = CGFloat.infinity
-        
-        // 모든 국가에 대해 반복하여 가장 가까운 좌표를 찾음
-        for feature in countriesData.features {
-            // 국가의 좌표를 반복
-            if let coordinates = feature.geometry.coordinates.first {
-                for coordinate in coordinates {
-                    // coordinate를 사용하여 작업 수행
-                    if coordinate.count == 2 {
-                        // 국가의 좌표를 CGPoint로 초기화
-                        let countryPoint = CGPoint(x: CGFloat(coordinate[0][0]), y: CGFloat(coordinate[0][1]))
-                        
-                        // 유클리드 거리 계산
-                        let distance = sqrt(pow(point.x - countryPoint.x, 2) + pow(point.y - countryPoint.y, 2))
-                        
-                        // 현재까지 최소 거리보다 더 가까운 경우, 최소 거리 업데이트
-                        if distance < minDistance {
-                            minDistance = distance
-                            nearestCountryName = feature.properties.name
-                        }
-                    }
-                }
-            } else {
-                print("coordinates가 없음")
-            }
-        }
-        
-        return nearestCountryName
-    }
-    
+
     
 
     func loadGeojson() -> MapFeatureCollection {
