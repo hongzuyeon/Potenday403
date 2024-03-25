@@ -22,6 +22,10 @@ extension Color {
         return Color(hex: "#8ACCF6")
     }
     
+    static var highlightGreen: Color {
+        return Color(hex: "005D10")
+    }
+    
 }
 
 extension Color {
