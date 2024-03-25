@@ -25,7 +25,7 @@ struct ContentView: View {
                     Image(systemName: "book.fill")
                     Text("지도집")
                 }
-            }
+            }.accentColor(.mainGreen)
         }
     }
 }
