@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  MapKit2
+//
+//  Created by joomin on 3/25/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = a9cf757f00972eaeff4befd171abe6b1
