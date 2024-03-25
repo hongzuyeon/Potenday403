@@ -15,6 +15,7 @@
 		135AA99C2BB0873C00965EAA /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA99B2BB0873C00965EAA /* ExploreView.swift */; };
 		135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA99D2BB0876E00965EAA /* MapCollectionView.swift */; };
 		135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */; };
+		135AA9A52BB1DB3900965EAA /* CodableGeoJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 135AA9A42BB1DB3900965EAA /* CodableGeoJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135AA9A52BB1DB3900965EAA /* CodableGeoJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,9 @@
 			dependencies = (
 			);
 			name = Trazzle;
+			packageProductDependencies = (
+				135AA9A42BB1DB3900965EAA /* CodableGeoJSON */,
+			);
 			productName = Trazzle;
 			productReference = 135AA9882BB071EB00965EAA /* Trazzle.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 135AA97F2BB071EB00965EAA;
+			packageReferences = (
+				135AA9A32BB1DB3900965EAA /* XCRemoteSwiftPackageReference "CodableGeoJSON" */,
+			);
 			productRefGroup = 135AA9892BB071EB00965EAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		135AA9A32BB1DB3900965EAA /* XCRemoteSwiftPackageReference "CodableGeoJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guykogus/CodableGeoJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		135AA9A42BB1DB3900965EAA /* CodableGeoJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 135AA9A32BB1DB3900965EAA /* XCRemoteSwiftPackageReference "CodableGeoJSON" */;
+			productName = CodableGeoJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 135AA9802BB071EB00965EAA /* Project object */;
 }
