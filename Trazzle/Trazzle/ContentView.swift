@@ -17,11 +17,6 @@ struct ContentView: View {
                         Image(systemName: "globe.americas.fill")
                         Text("홈")
                     }
-                ExploreView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("탐험")
-                    }
                 MapCollectionView().tabItem {
                     Image(systemName: "book.fill")
                     Text("지도집")

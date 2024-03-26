@@ -12,7 +12,6 @@
 		135AA9902BB071ED00965EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135AA98F2BB071ED00965EAA /* Assets.xcassets */; };
 		135AA9932BB071ED00965EAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135AA9922BB071ED00965EAA /* Preview Assets.xcassets */; };
 		135AA99A2BB0872800965EAA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9992BB0872800965EAA /* HomeView.swift */; };
-		135AA99C2BB0873C00965EAA /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA99B2BB0873C00965EAA /* ExploreView.swift */; };
 		135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA99D2BB0876E00965EAA /* MapCollectionView.swift */; };
 		135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */; };
 		135AA9A52BB1DB3900965EAA /* CodableGeoJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 135AA9A42BB1DB3900965EAA /* CodableGeoJSON */; };
@@ -28,7 +27,6 @@
 		135AA98F2BB071ED00965EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		135AA9922BB071ED00965EAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		135AA9992BB0872800965EAA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		135AA99B2BB0873C00965EAA /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		135AA99D2BB0876E00965EAA /* MapCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCollectionView.swift; sourceTree = "<group>"; };
 		135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSONMapDrawer.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				135AA9AC2BB1E10E00965EAA /* HomeView */,
 				135AA9AD2BB1E11C00965EAA /* MapCollectionView */,
-				135AA9AE2BB1E12900965EAA /* ExploreView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,14 +132,6 @@
 				135AA99D2BB0876E00965EAA /* MapCollectionView.swift */,
 			);
 			path = MapCollectionView;
-			sourceTree = "<group>";
-		};
-		135AA9AE2BB1E12900965EAA /* ExploreView */ = {
-			isa = PBXGroup;
-			children = (
-				135AA99B2BB0873C00965EAA /* ExploreView.swift */,
-			);
-			path = ExploreView;
 			sourceTree = "<group>";
 		};
 		135AA9AF2BB1E13F00965EAA /* resources */ = {
@@ -236,7 +225,6 @@
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
-				135AA99C2BB0873C00965EAA /* ExploreView.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,
 				135AA98C2BB071EB00965EAA /* TrazzleApp.swift in Sources */,
 			);
