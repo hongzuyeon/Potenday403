@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            
             TabView {
                 HomeView()
                     .tabItem {
@@ -21,9 +20,10 @@ struct ContentView: View {
                     Image(systemName: "book.fill")
                     Text("지도집")
                 }
+                
+                .frame(height: 83)
             }
             .accentColor(.mainGreen)
-            
         }
     }
 }
