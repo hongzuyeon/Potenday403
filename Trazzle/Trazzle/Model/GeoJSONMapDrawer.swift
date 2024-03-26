@@ -33,7 +33,7 @@ struct GeoJSONMapDrawer {
         for feature in features {
             guard let multipolygon = feature.geometry?.coordinates else { continue }
             var multiPolygonPath = Path()
-            let fillColor = colorDict[feature.id ?? ""] ?? .clear
+            let fillColor = colorDict[feature.id ?? ""] ?? .mapBlankColor
             for polygon in multipolygon {
                 let firstLinearRing = polygon.first!
                 for (index, position) in firstLinearRing.enumerated() {

@@ -26,6 +26,18 @@ extension Color {
         return Color(hex: "005D10")
     }
     
+    static var textBlack: Color {
+        return Color(hex: "121616")
+    }
+    
+    static var homeBgColor: Color {
+        return Color(hex: "C1C7CA")
+    }
+    
+    static var mapBlankColor: Color {
+        return Color(hex: "FDFDFD")
+    }
+    
 }
 
 extension Color {
