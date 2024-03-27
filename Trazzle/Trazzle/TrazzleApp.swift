@@ -8,6 +8,7 @@
 import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleSignIn
 
 @main
 struct TrazzleApp: App {
@@ -19,9 +20,13 @@ struct TrazzleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().onOpenURL(perform: { url in
+            LoginView().onOpenURL(perform: { url in
                 if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                    //Kakao
                     AuthController.handleOpenUrl(url: url)
+                }else if ((url.scheme?.contains("com.googleusercontent.apps")) != nil) { 
+                    //Google
+                    GIDSignIn.sharedInstance.handle(url)
                 }
             })
         }

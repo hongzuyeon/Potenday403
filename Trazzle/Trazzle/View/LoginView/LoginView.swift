@@ -6,15 +6,28 @@
 //
 
 import SwiftUI
+import GoogleSignInSwift
+import GoogleSignIn
 
 struct LoginView: View {
+    
     var body: some View {
         VStack {
-                    KakaoButton()
+            KakaoButton()
+            GoogleButton()
+            /*
+            GoogleSignInButton(action: handleSignInButton)
+                .frame(width : UIScreen.main.bounds.width * 0.9)
+                .multilineTextAlignment(.center)*/
         }
+    }
+    
+}
+
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
     }
 }
 
-#Preview {
-    LoginView()
-}

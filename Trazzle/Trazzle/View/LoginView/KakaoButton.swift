@@ -41,7 +41,7 @@ struct KakaoButton: View{
             Image("kakao_login_large_wide")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width : UIScreen.main.bounds.width * 0.9)
+                .frame(width : UIScreen.main.bounds.width * 0.9, height: 52)
         }
     }
 }
