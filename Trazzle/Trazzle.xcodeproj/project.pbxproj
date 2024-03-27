@@ -27,6 +27,9 @@
 		6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */; };
 		6C90AD992BB300BA00C4C411 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD982BB300BA00C4C411 /* GoogleSignIn */; };
 		6C90AD9B2BB300BA00C4C411 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */; };
+		6CC20B282BB4637C003C3ABE /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B272BB4637C003C3ABE /* CountryListView.swift */; };
+		6CC20B2A2BB46497003C3ABE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B292BB46497003C3ABE /* Country.swift */; };
+		6CC20B2D2BB466E5003C3ABE /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B2C2BB466E5003C3ABE /* ListController.swift */; };
 		6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC523F62BB4487200B7C3D0 /* AppleButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		6C90AD9C2BB304EF00C4C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CC20B272BB4637C003C3ABE /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		6CC20B292BB46497003C3ABE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		6CC20B2C2BB466E5003C3ABE /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		6CC523F62BB4487200B7C3D0 /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				6C90AD9C2BB304EF00C4C411 /* Info.plist */,
+				6CC20B2B2BB466C2003C3ABE /* Controller */,
 				135AA9A02BB1CB6700965EAA /* Extensions */,
 				135AA9A92BB1DCA000965EAA /* ViewModel */,
 				135AA9A62BB1DBDE00965EAA /* Model */,
@@ -110,6 +117,7 @@
 		135AA99F2BB089BD00965EAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CC20B262BB46367003C3ABE /* CountryListView */,
 				6C2A5E402BB2B82B00E224BC /* LoginView */,
 				135AA9AC2BB1E10E00965EAA /* HomeView */,
 				135AA9AD2BB1E11C00965EAA /* MapCollectionView */,
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */,
+				6CC20B292BB46497003C3ABE /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +193,22 @@
 				6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		6CC20B262BB46367003C3ABE /* CountryListView */ = {
+			isa = PBXGroup;
+			children = (
+				6CC20B272BB4637C003C3ABE /* CountryListView.swift */,
+			);
+			path = CountryListView;
+			sourceTree = "<group>";
+		};
+		6CC20B2B2BB466C2003C3ABE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CC20B2C2BB466E5003C3ABE /* ListController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,15 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC20B2A2BB46497003C3ABE /* Country.swift in Sources */,
 				6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */,
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
+				6CC20B282BB4637C003C3ABE /* CountryListView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
 				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,
 				6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */,
 				135AA99C2BB0873C00965EAA /* ExploreView.swift in Sources */,
+				6CC20B2D2BB466E5003C3ABE /* ListController.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,
 				6C2A5E4B2BB2B9E900E224BC /* LoginView.swift in Sources */,
 				135AA98C2BB071EB00965EAA /* TrazzleApp.swift in Sources */,
