@@ -38,6 +38,10 @@ extension Color {
         return Color(hex: "FDFDFD")
     }
     
+    static var textGray: Color {
+        return Color(hex: "697074")
+    }
+    
 }
 
 extension Color {

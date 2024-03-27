@@ -26,6 +26,7 @@
 		135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */; };
 		135AA9B12BB1E15600965EAA /* world.json in Resources */ = {isa = PBXBuildFile; fileRef = 135AA9B02BB1E15600965EAA /* world.json */; };
 		138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A02BB4675B001CFFD1 /* HomeNavView.swift */; };
+		138790A62BB484C6001CFFD1 /* ContryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		135AA9B02BB1E15600965EAA /* world.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
 		138790A02BB4675B001CFFD1 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
+		138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContryStatisticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		135AA99F2BB089BD00965EAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				138790A42BB48491001CFFD1 /* CountryStatisticView */,
 				133983072BB33C500080A750 /* CountryListView */,
 				135AA9AC2BB1E10E00965EAA /* HomeView */,
 				135AA9AD2BB1E11C00965EAA /* MapCollectionView */,
@@ -181,6 +184,14 @@
 				135AA98F2BB071ED00965EAA /* Assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		138790A42BB48491001CFFD1 /* CountryStatisticView */ = {
+			isa = PBXGroup;
+			children = (
+				138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */,
+			);
+			path = CountryStatisticView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 				138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */,
 				133983062BB333630080A750 /* TrazzleNavBarPreferenceKey.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
+				138790A62BB484C6001CFFD1 /* ContryStatisticView.swift in Sources */,
 				133983022BB32EE00080A750 /* TrazzleNavView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				133983002BB32EE00080A750 /* AppNavBarView.swift in Sources */,

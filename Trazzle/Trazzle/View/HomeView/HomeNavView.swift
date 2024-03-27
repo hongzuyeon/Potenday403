@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeNavView: View {
+    
+    @State var isShowingCountryStatisticsView = false
+    
     var body: some View {
         ZStack {
             Color.white.opacity(0.6).ignoresSafeArea()
@@ -38,7 +41,7 @@ struct HomeNavView: View {
                     }.frame(width: 48, height: 38)
                     
                 }
-                Spacer()
+                ContryStatisticView().frame(height: 109)
             }
         }
     }
