@@ -38,10 +38,22 @@ struct KakaoButton: View{
                 }
             }
         } label : {
-            Image("kakao_login_large_wide")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width : UIScreen.main.bounds.width * 0.9, height: 52)
-        }
+            Color(red: 254 / 255, green: 229 / 255, blue: 0 / 255)
+                    .cornerRadius(16) // 버튼을 rounded로 만듦
+                    .frame(width: UIScreen.main.bounds.width * 0.9, height: 52)
+                    .overlay(
+                        HStack {
+                            // 아이콘 이미지 추가
+                            Image("kakao_icon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 24, height: 24)
+                            
+                            // 텍스트 추가
+                            Text("카카오로 계속하기")
+                                .foregroundColor(.black)
+                        }
+                    )
+        }.padding(4)
     }
 }

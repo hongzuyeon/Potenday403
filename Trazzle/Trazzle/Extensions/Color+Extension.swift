@@ -26,6 +26,10 @@ extension Color {
         return Color(hex: "005D10")
     }
     
+    static var g400: Color {
+        return Color(hex: "878D96")
+    }
+    
 }
 
 extension Color {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ios_neutral_sq_SI@1x.png",
+      "filename" : "login_bg.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ios_neutral_sq_SI@2x.png",
+      "filename" : "login_bg 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ios_neutral_sq_SI@3x.png",
+      "filename" : "login_bg 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

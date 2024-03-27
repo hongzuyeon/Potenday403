@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import GoogleSignInSwift
 import GoogleSignIn
+import GoogleSignInSwift
 
 struct GoogleButton: View {
 
@@ -20,10 +20,27 @@ struct GoogleButton: View {
                 handleSignInButton()
             }) {
                 // 버튼 내부 뷰
-                Image("google_login_large_wide")
-                    .resizable()
-                    .frame(width: UIScreen.main.bounds.width * 0.9, height: 52)
-            }
+                RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white) // 백그라운드 색상을 흰색으로 설정
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(red: 221 / 255, green: 225 / 255, blue: 227 / 255), lineWidth: 1) // 테두리 색상을 DDE1E3으로 설정
+                        )
+                        .frame(width: UIScreen.main.bounds.width * 0.9, height: 52)
+                        .overlay(
+                            HStack {
+                                // 아이콘 이미지 추가
+                                Image("google_icon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 24, height: 24)
+                                
+                                // 텍스트 추가
+                                Text("구글로 계속하기")
+                                    .foregroundColor(.black)
+                            }
+                        )
+            }.padding(4)
         }
     
     func handleSignInButton() {

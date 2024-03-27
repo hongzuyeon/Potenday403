@@ -27,6 +27,7 @@
 		6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */; };
 		6C90AD992BB300BA00C4C411 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD982BB300BA00C4C411 /* GoogleSignIn */; };
 		6C90AD9B2BB300BA00C4C411 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */; };
+		6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC523F62BB4487200B7C3D0 /* AppleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		6C90AD9C2BB304EF00C4C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CC523F62BB4487200B7C3D0 /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				6C2A5E482BB2B98000E224BC /* KakaoButton.swift */,
 				6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */,
+				6CC523F62BB4487200B7C3D0 /* AppleButton.swift */,
 				6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */,
 			);
 			path = LoginView;
@@ -273,6 +276,7 @@
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
+				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,
 				6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */,
 				135AA99C2BB0873C00965EAA /* ExploreView.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,
