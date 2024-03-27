@@ -9,20 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "globe.americas.fill")
-                    Text("홈")
+        ZStack {
+            TabView {
+                Group {
+                    HomeView()
+                        .tabItem {
+                            Image("globe")
+                                .renderingMode(.original)
+                            Text("홈")
+                    }
+                    MapCollectionView()
+                        .tabItem {
+                            Image("book")
+                                .renderingMode(.original)
+                        Text("지도집")
+                    }
                 }
-            MapCollectionView().tabItem {
-                Image(systemName: "book.fill")
-                Text("지도집")
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
             }
-            
-            .frame(height: 83)
+            .tint(.mainGreen)
         }
-        .accentColor(.mainGreen)
     }
 }
 
