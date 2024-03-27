@@ -25,17 +25,17 @@ struct HomeNavView: View {
                             print("export button action")
                         },label: {
                             Image("export")
-                                .frame(height: 24, alignment: .trailing)
+                                .frame(alignment: .trailing)
                         })
                         
                         Button(action: {
                             print("statistics button action")
                         },label: {
                             Image("statistics")
-                                .frame(height: 24, alignment: .trailing)
+                                .frame(alignment: .trailing)
                         })
                         .padding(.trailing, 4)
-                    }.frame(width: 52, height: 52)
+                    }.frame(width: 48, height: 38)
                     
                 }
                 Spacer()
