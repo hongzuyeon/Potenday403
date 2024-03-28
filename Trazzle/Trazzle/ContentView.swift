@@ -15,13 +15,13 @@ struct ContentView: View {
                     HomeView()
                         .tabItem {
                             Image("globe")
-                                .renderingMode(.original)
+                                .renderingMode(.template)
                             Text("홈")
                     }
                     MapCollectionView()
                         .tabItem {
                             Image("book")
-                                .renderingMode(.original)
+                                .renderingMode(.template)
                         Text("지도집")
                     }
                 }
