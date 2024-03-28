@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1325339D2BB5ADBD00366CEB /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1325339C2BB5ADBD00366CEB /* View+Extension.swift */; };
-		133983002BB32EE00080A750 /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FB2BB32EE00080A750 /* AppNavBarView.swift */; };
-		133983012BB32EE00080A750 /* TrazzleNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FC2BB32EE00080A750 /* TrazzleNavLink.swift */; };
-		133983022BB32EE00080A750 /* TrazzleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FD2BB32EE00080A750 /* TrazzleNavView.swift */; };
-		133983032BB32EE00080A750 /* TrazzleNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FE2BB32EE00080A750 /* TrazzleNavBarContainerView.swift */; };
-		133983042BB32EE00080A750 /* TrazzleNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FF2BB32EE00080A750 /* TrazzleNavBarView.swift */; };
-		133983062BB333630080A750 /* TrazzleNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133983052BB333630080A750 /* TrazzleNavBarPreferenceKey.swift */; };
-		133983092BB33C620080A750 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133983082BB33C620080A750 /* CountryListView.swift */; };
 		135AA98C2BB071EB00965EAA /* TrazzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA98B2BB071EB00965EAA /* TrazzleApp.swift */; };
 		135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA98D2BB071EB00965EAA /* ContentView.swift */; };
 		135AA9902BB071ED00965EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135AA98F2BB071ED00965EAA /* Assets.xcassets */; };
@@ -26,19 +18,21 @@
 		135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */; };
 		135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */; };
 		135AA9B12BB1E15600965EAA /* world.json in Resources */ = {isa = PBXBuildFile; fileRef = 135AA9B02BB1E15600965EAA /* world.json */; };
-		138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A02BB4675B001CFFD1 /* HomeNavView.swift */; };
-		138790A62BB484C6001CFFD1 /* CountryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */; };
+		13DF06F62BB5D5C900DA4EE8 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06F52BB5D5C900DA4EE8 /* View+Extension.swift */; };
+		13DF06F82BB5D63400DA4EE8 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06F72BB5D63400DA4EE8 /* HomeNavView.swift */; };
+		13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06FB2BB5D69800DA4EE8 /* CountryStatisticView.swift */; };
+		6C2A5E432BB2B96400E224BC /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E422BB2B96400E224BC /* KakaoSDK */; };
+		6C2A5E452BB2B96400E224BC /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E442BB2B96400E224BC /* KakaoSDKAuth */; };
+		6C2A5E472BB2B96400E224BC /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E462BB2B96400E224BC /* KakaoSDKCommon */; };
+		6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A5E482BB2B98000E224BC /* KakaoButton.swift */; };
+		6C2A5E4B2BB2B9E900E224BC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */; };
+		6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */; };
+		6C90AD992BB300BA00C4C411 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD982BB300BA00C4C411 /* GoogleSignIn */; };
+		6C90AD9B2BB300BA00C4C411 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */; };
+		6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC523F62BB4487200B7C3D0 /* AppleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1325339C2BB5ADBD00366CEB /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		133982FB2BB32EE00080A750 /* AppNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavBarView.swift; path = NavigationBarView/AppNavBarView.swift; sourceTree = "<group>"; };
-		133982FC2BB32EE00080A750 /* TrazzleNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavLink.swift; path = NavigationBarView/TrazzleNavLink.swift; sourceTree = "<group>"; };
-		133982FD2BB32EE00080A750 /* TrazzleNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavView.swift; path = NavigationBarView/TrazzleNavView.swift; sourceTree = "<group>"; };
-		133982FE2BB32EE00080A750 /* TrazzleNavBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavBarContainerView.swift; path = NavigationBarView/TrazzleNavBarContainerView.swift; sourceTree = "<group>"; };
-		133982FF2BB32EE00080A750 /* TrazzleNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavBarView.swift; path = NavigationBarView/TrazzleNavBarView.swift; sourceTree = "<group>"; };
-		133983052BB333630080A750 /* TrazzleNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrazzleNavBarPreferenceKey.swift; sourceTree = "<group>"; };
-		133983082BB33C620080A750 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		135AA9882BB071EB00965EAA /* Trazzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trazzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		135AA98B2BB071EB00965EAA /* TrazzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrazzleApp.swift; sourceTree = "<group>"; };
 		135AA98D2BB071EB00965EAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,8 +44,14 @@
 		135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSONMapDrawer.swift; sourceTree = "<group>"; };
 		135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		135AA9B02BB1E15600965EAA /* world.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
-		138790A02BB4675B001CFFD1 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
-		138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticView.swift; sourceTree = "<group>"; };
+		13DF06F52BB5D5C900DA4EE8 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "View+Extension.swift"; path = "../../../../../Desktop/Trazzle/Extensions/View+Extension.swift"; sourceTree = "<group>"; };
+		13DF06F72BB5D63400DA4EE8 /* HomeNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
+		13DF06FB2BB5D69800DA4EE8 /* CountryStatisticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryStatisticView.swift; sourceTree = "<group>"; };
+		6C2A5E482BB2B98000E224BC /* KakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoButton.swift; sourceTree = "<group>"; };
+		6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		6C90AD9C2BB304EF00C4C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CC523F62BB4487200B7C3D0 /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,34 +59,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C90AD992BB300BA00C4C411 /* GoogleSignIn in Frameworks */,
+				6C2A5E472BB2B96400E224BC /* KakaoSDKCommon in Frameworks */,
 				135AA9A52BB1DB3900965EAA /* CodableGeoJSON in Frameworks */,
+				6C90AD9B2BB300BA00C4C411 /* GoogleSignInSwift in Frameworks */,
+				6C2A5E432BB2B96400E224BC /* KakaoSDK in Frameworks */,
+				6C2A5E452BB2B96400E224BC /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		133982EE2BB3143E0080A750 /* NavigationBarView */ = {
-			isa = PBXGroup;
-			children = (
-				133982FB2BB32EE00080A750 /* AppNavBarView.swift */,
-				133982FE2BB32EE00080A750 /* TrazzleNavBarContainerView.swift */,
-				133982FF2BB32EE00080A750 /* TrazzleNavBarView.swift */,
-				133982FC2BB32EE00080A750 /* TrazzleNavLink.swift */,
-				133982FD2BB32EE00080A750 /* TrazzleNavView.swift */,
-				133983052BB333630080A750 /* TrazzleNavBarPreferenceKey.swift */,
-			);
-			name = NavigationBarView;
-			sourceTree = "<group>";
-		};
-		133983072BB33C500080A750 /* CountryListView */ = {
-			isa = PBXGroup;
-			children = (
-				133983082BB33C620080A750 /* CountryListView.swift */,
-			);
-			path = CountryListView;
-			sourceTree = "<group>";
-		};
 		135AA97F2BB071EB00965EAA = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +90,7 @@
 		135AA98A2BB071EB00965EAA /* Trazzle */ = {
 			isa = PBXGroup;
 			children = (
-				133982EE2BB3143E0080A750 /* NavigationBarView */,
+				6C90AD9C2BB304EF00C4C411 /* Info.plist */,
 				135AA9A02BB1CB6700965EAA /* Extensions */,
 				135AA9A92BB1DCA000965EAA /* ViewModel */,
 				135AA9A62BB1DBDE00965EAA /* Model */,
@@ -130,9 +114,9 @@
 		135AA99F2BB089BD00965EAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				138790A42BB48491001CFFD1 /* CountryStatisticView */,
-				133983072BB33C500080A750 /* CountryListView */,
+				6C2A5E402BB2B82B00E224BC /* LoginView */,
 				135AA9AC2BB1E10E00965EAA /* HomeView */,
+				13DF06FA2BB5D68300DA4EE8 /* CountryStatisticView */,
 				135AA9AD2BB1E11C00965EAA /* MapCollectionView */,
 			);
 			path = View;
@@ -141,8 +125,8 @@
 		135AA9A02BB1CB6700965EAA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				13DF06F52BB5D5C900DA4EE8 /* View+Extension.swift */,
 				135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */,
-				1325339C2BB5ADBD00366CEB /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,8 +150,8 @@
 		135AA9AC2BB1E10E00965EAA /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				13DF06F72BB5D63400DA4EE8 /* HomeNavView.swift */,
 				135AA9992BB0872800965EAA /* HomeView.swift */,
-				138790A02BB4675B001CFFD1 /* HomeNavView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -189,12 +173,23 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		138790A42BB48491001CFFD1 /* CountryStatisticView */ = {
+		13DF06FA2BB5D68300DA4EE8 /* CountryStatisticView */ = {
 			isa = PBXGroup;
 			children = (
-				138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */,
+				13DF06FB2BB5D69800DA4EE8 /* CountryStatisticView.swift */,
 			);
 			path = CountryStatisticView;
+			sourceTree = "<group>";
+		};
+		6C2A5E402BB2B82B00E224BC /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				6C2A5E482BB2B98000E224BC /* KakaoButton.swift */,
+				6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */,
+				6CC523F62BB4487200B7C3D0 /* AppleButton.swift */,
+				6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +210,11 @@
 			name = Trazzle;
 			packageProductDependencies = (
 				135AA9A42BB1DB3900965EAA /* CodableGeoJSON */,
+				6C2A5E422BB2B96400E224BC /* KakaoSDK */,
+				6C2A5E442BB2B96400E224BC /* KakaoSDKAuth */,
+				6C2A5E462BB2B96400E224BC /* KakaoSDKCommon */,
+				6C90AD982BB300BA00C4C411 /* GoogleSignIn */,
+				6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */,
 			);
 			productName = Trazzle;
 			productReference = 135AA9882BB071EB00965EAA /* Trazzle.app */;
@@ -246,6 +246,8 @@
 			mainGroup = 135AA97F2BB071EB00965EAA;
 			packageReferences = (
 				135AA9A32BB1DB3900965EAA /* XCRemoteSwiftPackageReference "CodableGeoJSON" */,
+				6C2A5E412BB2B96400E224BC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				6C90AD972BB300BA00C4C411 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 135AA9892BB071EB00965EAA /* Products */;
 			projectDirPath = "";
@@ -274,22 +276,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133983032BB32EE00080A750 /* TrazzleNavBarContainerView.swift in Sources */,
+				6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */,
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
-				1325339D2BB5ADBD00366CEB /* View+Extension.swift in Sources */,
-				138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */,
-				133983062BB333630080A750 /* TrazzleNavBarPreferenceKey.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
-				138790A62BB484C6001CFFD1 /* CountryStatisticView.swift in Sources */,
-				133983022BB32EE00080A750 /* TrazzleNavView.swift in Sources */,
+				13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
-				133983002BB32EE00080A750 /* AppNavBarView.swift in Sources */,
-				133983042BB32EE00080A750 /* TrazzleNavBarView.swift in Sources */,
-				133983092BB33C620080A750 /* CountryListView.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
+				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,
+				6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,
-				133983012BB32EE00080A750 /* TrazzleNavLink.swift in Sources */,
+				13DF06F82BB5D63400DA4EE8 /* HomeNavView.swift in Sources */,
+				6C2A5E4B2BB2B9E900E224BC /* LoginView.swift in Sources */,
+				13DF06F62BB5D5C900DA4EE8 /* View+Extension.swift in Sources */,
 				135AA98C2BB071EB00965EAA /* TrazzleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +421,7 @@
 				DEVELOPMENT_TEAM = J2GZP92B25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trazzle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +455,7 @@
 				DEVELOPMENT_TEAM = J2GZP92B25;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trazzle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,6 +510,22 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		6C2A5E412BB2B96400E224BC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		6C90AD972BB300BA00C4C411 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -516,6 +533,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 135AA9A32BB1DB3900965EAA /* XCRemoteSwiftPackageReference "CodableGeoJSON" */;
 			productName = CodableGeoJSON;
+		};
+		6C2A5E422BB2B96400E224BC /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C2A5E412BB2B96400E224BC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		6C2A5E442BB2B96400E224BC /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C2A5E412BB2B96400E224BC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		6C2A5E462BB2B96400E224BC /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C2A5E412BB2B96400E224BC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		6C90AD982BB300BA00C4C411 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C90AD972BB300BA00C4C411 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C90AD972BB300BA00C4C411 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

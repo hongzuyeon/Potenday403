@@ -25,3 +25,4 @@ class HomeViewModel {
         return try? JSONDecoder().decode(MapFeatureCollection.self, from: data)
     }
 }
+

@@ -46,6 +46,10 @@ extension Color {
         return Color(hex: "343A3C")
     }
     
+    static var g400: Color {
+        return Color(hex: "878D96")
+    }
+    
 }
 
 extension Color {
@@ -62,3 +66,4 @@ extension Color {
         self.init(red: r, green: g, blue: b)
     }
 }
+
