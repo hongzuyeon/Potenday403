@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1325339D2BB5ADBD00366CEB /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1325339C2BB5ADBD00366CEB /* View+Extension.swift */; };
 		133983002BB32EE00080A750 /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FB2BB32EE00080A750 /* AppNavBarView.swift */; };
 		133983012BB32EE00080A750 /* TrazzleNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FC2BB32EE00080A750 /* TrazzleNavLink.swift */; };
 		133983022BB32EE00080A750 /* TrazzleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133982FD2BB32EE00080A750 /* TrazzleNavView.swift */; };
@@ -26,10 +27,11 @@
 		135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */; };
 		135AA9B12BB1E15600965EAA /* world.json in Resources */ = {isa = PBXBuildFile; fileRef = 135AA9B02BB1E15600965EAA /* world.json */; };
 		138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A02BB4675B001CFFD1 /* HomeNavView.swift */; };
-		138790A62BB484C6001CFFD1 /* ContryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */; };
+		138790A62BB484C6001CFFD1 /* CountryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1325339C2BB5ADBD00366CEB /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		133982FB2BB32EE00080A750 /* AppNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppNavBarView.swift; path = NavigationBarView/AppNavBarView.swift; sourceTree = "<group>"; };
 		133982FC2BB32EE00080A750 /* TrazzleNavLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavLink.swift; path = NavigationBarView/TrazzleNavLink.swift; sourceTree = "<group>"; };
 		133982FD2BB32EE00080A750 /* TrazzleNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrazzleNavView.swift; path = NavigationBarView/TrazzleNavView.swift; sourceTree = "<group>"; };
@@ -49,7 +51,7 @@
 		135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		135AA9B02BB1E15600965EAA /* world.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
 		138790A02BB4675B001CFFD1 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
-		138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContryStatisticView.swift; sourceTree = "<group>"; };
+		138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */,
+				1325339C2BB5ADBD00366CEB /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,7 +192,7 @@
 		138790A42BB48491001CFFD1 /* CountryStatisticView */ = {
 			isa = PBXGroup;
 			children = (
-				138790A52BB484C6001CFFD1 /* ContryStatisticView.swift */,
+				138790A52BB484C6001CFFD1 /* CountryStatisticView.swift */,
 			);
 			path = CountryStatisticView;
 			sourceTree = "<group>";
@@ -274,10 +277,11 @@
 				133983032BB32EE00080A750 /* TrazzleNavBarContainerView.swift in Sources */,
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
+				1325339D2BB5ADBD00366CEB /* View+Extension.swift in Sources */,
 				138790A12BB4675B001CFFD1 /* HomeNavView.swift in Sources */,
 				133983062BB333630080A750 /* TrazzleNavBarPreferenceKey.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
-				138790A62BB484C6001CFFD1 /* ContryStatisticView.swift in Sources */,
+				138790A62BB484C6001CFFD1 /* CountryStatisticView.swift in Sources */,
 				133983022BB32EE00080A750 /* TrazzleNavView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				133983002BB32EE00080A750 /* AppNavBarView.swift in Sources */,

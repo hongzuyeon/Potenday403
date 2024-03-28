@@ -42,6 +42,10 @@ extension Color {
         return Color(hex: "697074")
     }
     
+    static var navBlack: Color {
+        return Color(hex: "343A3C")
+    }
+    
 }
 
 extension Color {

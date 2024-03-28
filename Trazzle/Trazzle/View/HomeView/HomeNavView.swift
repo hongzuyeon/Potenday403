@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeNavView: View {
     
+    @Binding var titleText: String
     @State var isShowingCountryStatisticsView = false
     
     var body: some View {
@@ -16,7 +17,7 @@ struct HomeNavView: View {
             Color.white.opacity(0.6).ignoresSafeArea()
             VStack(spacing: 0) {
                 HStack(alignment: .center) {
-                    Text("MY Travel")
+                    Text(titleText)
                         .padding(.horizontal, 16)
                         .foregroundColor(.highlightGreen)
                         .font(.system(size: 18))
@@ -28,20 +29,28 @@ struct HomeNavView: View {
                             print("export button action")
                         },label: {
                             Image("export")
-                                .frame(alignment: .trailing)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
                         })
                         
                         Button(action: {
-                            print("statistics button action")
+                            self.isShowingCountryStatisticsView.toggle()
+                            print("isShowingCS: \(isShowingCountryStatisticsView)")
+                            
                         },label: {
                             Image("statistics")
-                                .frame(alignment: .trailing)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
                         })
-                        .padding(.trailing, 4)
-                    }.frame(width: 48, height: 38)
-                    
+                    }
+                    .frame(width: 48, height: 48)
+                    Spacer().frame(width: 4)
                 }
-                ContryStatisticView().frame(height: 109)
+                CountryStatisticView()
+                    .frame(height: 109)
+                    .hide(if: !isShowingCountryStatisticsView)
             }
         }
     }
@@ -49,6 +58,6 @@ struct HomeNavView: View {
 
 struct HomeNavView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeNavView()
+        HomeNavView(titleText: .constant("Trazzle에서 내 여행을 기록해요!"))
     }
 }

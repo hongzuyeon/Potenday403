@@ -11,6 +11,7 @@ import CodableGeoJSON
 struct HomeView: View {
     
     var homeVM = HomeViewModel.shared
+    @State var navTitle: String = "MY Travel"
     
     var body: some View {
         ZStack{
@@ -31,23 +32,26 @@ struct HomeView: View {
             }.ignoresSafeArea()
             
             VStack {
-                HomeNavView()
+                HomeNavView(titleText: $navTitle)
                     .frame(height: 52, alignment: .top)
                 Spacer()
-                HStack() {
+                HStack {
                     Spacer()
                     Button(action: {
                         print("floating button action")
                     }, label: {
                         Image(systemName: "plus")
                             .resizable()
-                            .frame(width: 32, height: 32)
-                            .padding()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                            .padding(.all)
                     })
                     .background(Color.mainGreen)
+                    .frame(width: 56, height: 56)
                     .foregroundColor(.white)
                     .clipShape(Circle())
                     .shadow(radius: 4, x: 0 , y: 4)
+                    
                     Spacer().frame(width: 16)
                 }
                 Spacer().frame(height: 40)
