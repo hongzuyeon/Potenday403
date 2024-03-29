@@ -9,26 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            
+        ZStack {
             TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "globe.americas.fill")
-                        Text("홈")
+                Group {
+                    HomeView()
+                        .tabItem {
+                            Image("globe")
+                                .renderingMode(.template)
+                            Text("홈")
                     }
-                ExploreView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("탐험")
+                    MapCollectionView()
+                        .tabItem {
+                            Image("book")
+                                .renderingMode(.template)
+                        Text("지도집")
                     }
-                MapCollectionView().tabItem {
-                    Image(systemName: "book.fill")
-                    Text("지도집")
                 }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.white, for: .tabBar)
             }
-            .accentColor(.mainGreen)
-            
+            .tint(.mainGreen)
         }
     }
 }
