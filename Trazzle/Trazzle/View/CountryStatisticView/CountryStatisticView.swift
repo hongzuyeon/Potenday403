@@ -15,25 +15,22 @@ struct CountryStatisticView: View {
     var body: some View {
         ZStack {
             Color.clear.ignoresSafeArea()
-            HStack {
-                Spacer().frame(width: 16)
+            HStack(spacing: .zero) {
                 ForEach(Array(values.enumerated()), id: \.element) { (index, value) in
                     VStack {
                         Text(value)
-                            .font(.system(size: 26))
-                            .fontWeight(.heavy)
+                            .font(.system(size: 26, weight: .semibold))
                             .foregroundColor(.mainGreen)
-                            .frame(maxWidth: .infinity)
-                        Spacer().frame(height: 12)
                         Text(keys[index])
-                            .font(.system(size: 16))
-                            .fontWeight(.semibold)
+                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.g500)
-                            .frame(maxWidth: .infinity)
                     }
+                    .foregroundColor(.yellow)
+                    .frame(maxWidth: .infinity)
                 }
-                Spacer().frame(width: 16)
             }
+            .padding(.all, 16)
+            
         }
     }
 }

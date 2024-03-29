@@ -30,6 +30,10 @@ extension Color {
         return Color(hex: "C1C7CA")
     }
     
+    static var mapBgColor: Color {
+        return Color(hex: "E6E8EA")
+    }
+    
     static var mapBlankColor: Color {
         return Color(hex: "FDFDFD")
     }
