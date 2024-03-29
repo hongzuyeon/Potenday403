@@ -26,6 +26,18 @@ extension Color {
         return Color(hex: "005D10")
     }
     
+    static var g50: Color {
+        return Color(hex: "F2F4F5")
+    }
+    
+    static var g100: Color {
+        return Color(hex: "DDE1E3")
+    }
+    
+    static var g300: Color {
+        return Color(hex: "A2A9AD")
+    }
+    
     static var g400: Color {
         return Color(hex: "878D96")
     }

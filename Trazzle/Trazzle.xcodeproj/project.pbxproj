@@ -27,6 +27,8 @@
 		6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */; };
 		6C90AD992BB300BA00C4C411 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD982BB300BA00C4C411 /* GoogleSignIn */; };
 		6C90AD9B2BB300BA00C4C411 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C90AD9A2BB300BA00C4C411 /* GoogleSignInSwift */; };
+		6CB222342BB5A80000C5EC46 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB222332BB5A80000C5EC46 /* SearchBar.swift */; };
+		6CB222362BB5BB4D00C5EC46 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB222352BB5BB4D00C5EC46 /* Backport.swift */; };
 		6CC20B282BB4637C003C3ABE /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B272BB4637C003C3ABE /* CountryListView.swift */; };
 		6CC20B2A2BB46497003C3ABE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B292BB46497003C3ABE /* Country.swift */; };
 		6CC20B2D2BB466E5003C3ABE /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC20B2C2BB466E5003C3ABE /* ListController.swift */; };
@@ -50,6 +52,8 @@
 		6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		6C90AD9C2BB304EF00C4C411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CB222332BB5A80000C5EC46 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		6CB222352BB5BB4D00C5EC46 /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		6CC20B272BB4637C003C3ABE /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		6CC20B292BB46497003C3ABE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		6CC20B2C2BB466E5003C3ABE /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */,
+				6CB222332BB5A80000C5EC46 /* SearchBar.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				6CC20B272BB4637C003C3ABE /* CountryListView.swift */,
+				6CB222352BB5BB4D00C5EC46 /* Backport.swift */,
 			);
 			path = CountryListView;
 			sourceTree = "<group>";
@@ -299,7 +305,9 @@
 				6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */,
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
+				6CB222362BB5BB4D00C5EC46 /* Backport.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
+				6CB222342BB5A80000C5EC46 /* SearchBar.swift in Sources */,
 				6CC20B282BB4637C003C3ABE /* CountryListView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
@@ -438,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trazzle/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GZP92B25;
+				DEVELOPMENT_TEAM = 3J5ZFK63VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Trazzle/Info.plist;
@@ -472,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trazzle/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GZP92B25;
+				DEVELOPMENT_TEAM = 3J5ZFK63VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Trazzle/Info.plist;

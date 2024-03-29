@@ -30,38 +30,65 @@ struct CountryListView: View {
         Country(name: "Bangladesh", id: "BD")
     ]
     
+    
+    init() {
+        UITableView.appearance().backgroundColor = .white
+        UICollectionView.appearance().backgroundColor = .white
+    }
+    
     var body: some View {
+        @State var searchText = ""
+        var count = 0
         
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 
-                VStack {
+                HStack {
+                    BackButton()
+                    Spacer()
+                    Text("여행 기록")
+                    Spacer()
                 }
-                .navigationBarItems(trailing: EmptyView()) // 우측에 공간 추가
-                .navigationBarTitleDisplayMode(.inline) // 타이틀을 가운데 정렬하기 위해 필요
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        // 뒤로가기 버튼 또는 다른 필요한 버튼 추가
-                        BackButton()
+                .padding()
+                .frame(height: 48)
+                
+
+                VStack() {
+                    SearchBar(searchText: $searchText, placeHolder: "국가명으로 검색")
+                        .padding()
+                    
+                    Text("총 \(count)개국")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.horizontal, 16)
+                        .font(Font.system(size: 12))
+                        .foregroundColor(.g300)
+                        
+                }.background(Color.g50)
+                
+                    
+                
+                if #available(iOS 16.0, *) {
+                    List(countries, id: \.id) { country in
+                        Text(country.name)
+                            .listRowBackground(Color.white)
+                    }.scrollContentBackground(.hidden)
+                        .preferredColorScheme(.light)
+                        .background(Color.g50)
+                } else {
+                    List(countries, id: \.id) { country in
+                        Text(country.name)
+                            .listRowBackground(Color.white)
                     }
-                    ToolbarItem(placement: .principal) {
-                        // 텍스트 뷰를 사용하여 navigationTitle 대체
-                        Text("여행 기록")
-                            .font(.subheadline) // 타이틀의 크기 설정
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        // 우측에 공간 추가
-                        EmptyView()
-                    }
+                    .preferredColorScheme(.light)
+                    .background(Color.g50)
                 }
                 
-                
-                
-                List(countries, id: \.id) { country in
-                    Text(country.name)
-                }
             }
-            .navigationTitle("여행 기록") // 네비게이션 타이틀 설정
+            /*
+            .navigationTitle("여행 기록")
+            .background(Color.white)
+            .foregroundColor(.black)
+             */
         }
         
     }
@@ -73,6 +100,7 @@ struct BackButton: View {
             // 뒤로가기 버튼 기능 구현
         }) {
             Image(systemName: "arrow.left")
+                .foregroundColor(.black)
         }
     }
 }
