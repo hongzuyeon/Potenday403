@@ -7,29 +7,11 @@
 
 import SwiftUI
 
+let countryURL = "https://trazzle.p-e.kr/api/countries"
+
 struct CountryListView: View {
     
-    @State private var countries: [Country] = [
-        Country(name: "Afghanistan", id: "AF"),
-        Country(name: "Albania", id: "AL"),
-        Country(name: "Algeria", id: "DZ"),
-        Country(name: "American Samoa", id: "AS"),
-        Country(name: "Andorra", id: "AD"),
-        Country(name: "Angola", id: "AO"),
-        Country(name: "Anguilla", id: "AI"),
-        Country(name: "Antarctica", id: "AQ"),
-        Country(name: "Antigua and Barbuda", id: "AG"),
-        Country(name: "Argentina", id: "AR"),
-        Country(name: "Armenia", id: "AM"),
-        Country(name: "Aruba", id: "AW"),
-        Country(name: "Australia", id: "AU"),
-        Country(name: "Austria", id: "AT"),
-        Country(name: "Azerbaijan", id: "AZ"),
-        Country(name: "Bahamas", id: "BS"),
-        Country(name: "Bahrain", id: "BH"),
-        Country(name: "Bangladesh", id: "BD")
-    ]
-    
+    @State private var results = [Country]()
     
     init() {
         UITableView.appearance().backgroundColor = .white
@@ -38,7 +20,7 @@ struct CountryListView: View {
     
     var body: some View {
         @State var searchText = ""
-        var count = 0
+        var count = results.count
         
         NavigationView {
             VStack(spacing: 0) {
@@ -60,24 +42,30 @@ struct CountryListView: View {
                     Text("총 \(count)개국")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.horizontal, 16)
+                        .padding(.bottom, 12)
                         .font(Font.system(size: 12))
                         .foregroundColor(.g300)
                         
                 }.background(Color.g50)
                 
-                    
                 
                 if #available(iOS 16.0, *) {
-                    List(countries, id: \.id) { country in
+                    List(results, id: \.name) { country in
                         Text(country.name)
-                            .listRowBackground(Color.white)
+                            .background(
+                                NavigationLink("",destination: CityListView(country: country)
+                            ).opacity(0)
+                        
+                        )
                     }.scrollContentBackground(.hidden)
                         .preferredColorScheme(.light)
                         .background(Color.g50)
                 } else {
-                    List(countries, id: \.id) { country in
-                        Text(country.name)
-                            .listRowBackground(Color.white)
+                    List(results, id: \.name) { country in
+                        NavigationLink(destination: CityListView(country: country)) {
+                            Text(country.name)
+                                .listRowBackground(Color.white)
+                        }
                     }
                     .preferredColorScheme(.light)
                     .background(Color.g50)
@@ -89,9 +77,27 @@ struct CountryListView: View {
             .background(Color.white)
             .foregroundColor(.black)
              */
+        }.task {
+            await loadData()
         }
         
     }
+    
+    func loadData() async {
+        guard let url = URL(string: countryURL) else {
+            print("Invalid URL")
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            // --- here
+            let decoded: [Country] = try JSONDecoder().decode([Country].self, from: data)
+            results = decoded
+        } catch {
+            print(error)  // <--- important
+        }
+    }
+    
 }
 
 struct BackButton: View {

@@ -54,10 +54,35 @@ extension Color {
         return Color(hex: "DDE1E3")
     }
     
+    static var g200: Color {
+        return Color(hex: "C1C7CA")
+    }
+    
     static var g300: Color {
         return Color(hex: "A2A9AD")
+    }
+    
+    static var g400: Color {
+        return Color(hex: "878D96")
+    }
+    
+    static var g500: Color {
+        return Color(hex: "697074")
+    }
+    
+}
+
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex)
+        _ = scanner.scanString("#")
+        
+        var rgb: UInt64 = 0
+        scanner.scanHexInt64(&rgb)
+        
+        let r = Double((rgb >> 16) & 0xFF) / 255.0
+        let g = Double((rgb >>  8) & 0xFF) / 255.0
         let b = Double((rgb >>  0) & 0xFF) / 255.0
         self.init(red: r, green: g, blue: b)
     }
 }
-

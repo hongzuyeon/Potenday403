@@ -9,5 +9,5 @@ import Foundation
 
 struct Country: Codable {
     let name: String
-    let id: String
+    let code: String
 }
