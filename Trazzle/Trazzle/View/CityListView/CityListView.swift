@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct CityListView: View {
+    @State private var results = [City]()
+    let cityURL = "https://trazzle.p-e.kr/api/cities?countryCode="
     let country: Country
+    
     let cities = ["New York", "London", "Paris", "Tokyo", "Sydney", "Rome", "Berlin", "Moscow", "Seoul", "Beijing",
                   "New York", "London", "Paris", "Tokyo", "Sydney", "Rome", "Berlin", "Moscow", "Seoul", "Beijing"]
         
@@ -32,19 +35,27 @@ struct CityListView: View {
             
         }
     }
-}
-
-
-struct CancelButton: View {
-    var body: some View {
-        Button(action: {
-            // 뒤로가기 버튼 기능 구현
-        }) {
-            Image(systemName: "xmark")
-                .foregroundColor(.black)
+    
+    
+    func loadData() async {
+        guard let url = URL(string: cityURL + country.code) else {
+            print("Invalid URL")
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            // --- here
+            let decoded: [City] = try JSONDecoder().decode([City].self, from: data)
+            results = decoded
+        } catch {
+            print(error)  // <--- important
         }
     }
+    
+    
 }
+
+
 
 
 //#Preview {
