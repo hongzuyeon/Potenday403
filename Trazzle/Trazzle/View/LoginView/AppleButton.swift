@@ -5,13 +5,14 @@
 //  Created by joomin on 3/27/24.
 //
 
+import AuthenticationServices
 import SwiftUI
 
 struct AppleButton: View {
     var body: some View {
-        Button {
+        Button{
             
-            //애플 로그인
+            performSignIn()
             
         } label : {
             Color(red: 0 / 255, green: 0 / 255, blue: 0 / 255)
@@ -32,7 +33,36 @@ struct AppleButton: View {
                     )
         }.padding(8)
     }
+    
+    func performSignIn() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = AppleSignInDelegate()
+        
+        controller.performRequests()
+    }
 }
+
+class AppleSignInDelegate: NSObject, ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            
+            print("User ID: \(userIdentifier)")
+            print("Full Name: \(fullName?.givenName ?? "") \(fullName?.familyName ?? "")")
+            print("Email: \(email ?? "")")
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("Authorization failed: \(error.localizedDescription)")
+    }
+}
+
 
 //#Preview {
 //    AppleButton()

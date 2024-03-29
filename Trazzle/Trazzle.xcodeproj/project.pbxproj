@@ -23,6 +23,7 @@
 		6C158B502BB68C72004B32CD /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C158B4F2BB68C72004B32CD /* MainButton.swift */; };
 		6C158B542BB6DD2C004B32CD /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C158B532BB6DD2C004B32CD /* CategoryView.swift */; };
 		6C158B582BB7018A004B32CD /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C158B572BB7018A004B32CD /* City.swift */; };
+		6C158B5A2BB708CC004B32CD /* LoginSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C158B592BB708CC004B32CD /* LoginSender.swift */; };
 		6C2A5E432BB2B96400E224BC /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E422BB2B96400E224BC /* KakaoSDK */; };
 		6C2A5E452BB2B96400E224BC /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E442BB2B96400E224BC /* KakaoSDKAuth */; };
 		6C2A5E472BB2B96400E224BC /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 6C2A5E462BB2B96400E224BC /* KakaoSDKCommon */; };
@@ -56,8 +57,10 @@
 		6C158B4F2BB68C72004B32CD /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		6C158B532BB6DD2C004B32CD /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		6C158B572BB7018A004B32CD /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		6C158B592BB708CC004B32CD /* LoginSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSender.swift; sourceTree = "<group>"; };
 		6C2A5E482BB2B98000E224BC /* KakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoButton.swift; sourceTree = "<group>"; };
 		6C2A5E4A2BB2B9E900E224BC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6C8435012BB717AC00617BE0 /* Trazzle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trazzle.entitlements; sourceTree = "<group>"; };
 		6C902D572BB6850F002829AA /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		6C902D582BB6850F002829AA /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		6C90AD952BB2FF2700C4C411 /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		135AA98A2BB071EB00965EAA /* Trazzle */ = {
 			isa = PBXGroup;
 			children = (
+				6C8435012BB717AC00617BE0 /* Trazzle.entitlements */,
 				6C90AD9C2BB304EF00C4C411 /* Info.plist */,
 				6C902D592BB6850F002829AA /* Extensions */,
 				135AA9A92BB1DCA000965EAA /* ViewModel */,
@@ -144,6 +148,7 @@
 				135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */,
 				6CC20B292BB46497003C3ABE /* Country.swift */,
 				6C158B572BB7018A004B32CD /* City.swift */,
+				6C158B592BB708CC004B32CD /* LoginSender.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,
 				6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,
+				6C158B5A2BB708CC004B32CD /* LoginSender.swift in Sources */,
 				6C158B542BB6DD2C004B32CD /* CategoryView.swift in Sources */,
 				13DF06F82BB5D63400DA4EE8 /* HomeNavView.swift in Sources */,
 				6C2A5E4B2BB2B9E900E224BC /* LoginView.swift in Sources */,
@@ -459,12 +465,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Trazzle/Trazzle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trazzle/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Z5NSZRPQF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Trazzle/Info.plist;
@@ -482,7 +488,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.potenday.trazzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Trazzle Debug";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -497,12 +502,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = Trazzle/Trazzle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trazzle/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Z5NSZRPQF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Trazzle/Info.plist;
@@ -520,7 +525,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.potenday.trazzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Trazzle Release";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

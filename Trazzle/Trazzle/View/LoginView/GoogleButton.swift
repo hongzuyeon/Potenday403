@@ -56,8 +56,11 @@ struct GoogleButton: View {
             
             guard let result = signInResult else {
                 // Inspect error
+                print("google result error")
                 return
             }
+            
+            print("result: \(result)")
             // If sign in succeeded, display the app's main content View.
         }
     }
