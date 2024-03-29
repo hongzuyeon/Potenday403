@@ -26,6 +26,26 @@ extension Color {
         return Color(hex: "005D10")
     }
     
+    static var textBlack: Color {
+        return Color(hex: "121616")
+    }
+    
+    static var homeBgColor: Color {
+        return Color(hex: "C1C7CA")
+    }
+    
+    static var mapBlankColor: Color {
+        return Color(hex: "FDFDFD")
+    }
+    
+    static var textGray: Color {
+        return Color(hex: "697074")
+    }
+    
+    static var navBlack: Color {
+        return Color(hex: "343A3C")
+    }
+    
     static var g400: Color {
         return Color(hex: "878D96")
     }
@@ -46,3 +66,4 @@ extension Color {
         self.init(red: r, green: g, blue: b)
     }
 }
+
