@@ -18,7 +18,7 @@ struct ContentView: View {
                                 .renderingMode(.template)
                             Text("홈")
                     }
-                    MapCollectionView()
+                    TravelRecordCollectionView()
                         .tabItem {
                             Image("book")
                                 .renderingMode(.template)

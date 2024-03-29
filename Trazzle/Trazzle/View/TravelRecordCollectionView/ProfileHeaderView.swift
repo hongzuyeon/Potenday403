@@ -22,12 +22,14 @@ struct ProfileHeaderView: View {
                 HStack {
                     Image("book")
                         .resizable()
-                        .scaledToFill()
-                        .clipped()
+                        .scaledToFit()
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.homeBgColor,
+                                                 lineWidth: 1))
                         .frame(width: 68, height: 68)
-                        .cornerRadius(68 / 2)
+                    
                     Spacer().frame(width: 15)
-                    CountryStatisticView()
+                    CountryStatisticView(isRecordView: true)
                         .frame(height: 68)
                 }
                 .padding(.top, 12)
