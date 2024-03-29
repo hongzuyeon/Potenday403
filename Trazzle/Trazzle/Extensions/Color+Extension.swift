@@ -26,10 +26,6 @@ extension Color {
         return Color(hex: "005D10")
     }
     
-    static var textBlack: Color {
-        return Color(hex: "121616")
-    }
-    
     static var homeBgColor: Color {
         return Color(hex: "C1C7CA")
     }
@@ -38,16 +34,20 @@ extension Color {
         return Color(hex: "FDFDFD")
     }
     
-    static var textGray: Color {
+    static var g400: Color {
+        return Color(hex: "878D96")
+    }
+    
+    static var g500: Color {
         return Color(hex: "697074")
     }
     
-    static var navBlack: Color {
+    static var g700: Color {
         return Color(hex: "343A3C")
     }
     
-    static var g400: Color {
-        return Color(hex: "878D96")
+    static var g900: Color {
+        return Color(hex: "121616")
     }
     
 }

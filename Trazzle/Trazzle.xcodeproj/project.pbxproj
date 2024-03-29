@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134A7B672BB700EA0006522F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A7B662BB700EA0006522F /* ProfileHeaderView.swift */; };
 		135AA98C2BB071EB00965EAA /* TrazzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA98B2BB071EB00965EAA /* TrazzleApp.swift */; };
 		135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA98D2BB071EB00965EAA /* ContentView.swift */; };
 		135AA9902BB071ED00965EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135AA98F2BB071ED00965EAA /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		134A7B662BB700EA0006522F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		135AA9882BB071EB00965EAA /* Trazzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trazzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		135AA98B2BB071EB00965EAA /* TrazzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrazzleApp.swift; sourceTree = "<group>"; };
 		135AA98D2BB071EB00965EAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				135AA99D2BB0876E00965EAA /* MapCollectionView.swift */,
+				134A7B662BB700EA0006522F /* ProfileHeaderView.swift */,
 			);
 			path = MapCollectionView;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
+				134A7B672BB700EA0006522F /* ProfileHeaderView.swift in Sources */,
 				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,
 				6C2A5E492BB2B98000E224BC /* KakaoButton.swift in Sources */,
 				135AA99E2BB0876E00965EAA /* MapCollectionView.swift in Sources */,

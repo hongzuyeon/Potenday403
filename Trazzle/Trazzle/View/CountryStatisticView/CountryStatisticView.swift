@@ -28,7 +28,7 @@ struct CountryStatisticView: View {
                         Text(keys[index])
                             .font(.system(size: 16))
                             .fontWeight(.semibold)
-                            .foregroundColor(.textGray)
+                            .foregroundColor(.g500)
                             .frame(maxWidth: .infinity)
                     }
                 }
