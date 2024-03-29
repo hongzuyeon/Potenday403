@@ -19,6 +19,7 @@ struct CountryListView: View {
     }
     
     var body: some View {
+        @State var isTapped = false
         @State var searchText = ""
         var count = results.count
         
@@ -39,10 +40,20 @@ struct CountryListView: View {
                     SearchBar(searchText: $searchText, placeHolder: "국가명으로 검색")
                         .padding()
                     
+                    ScrollView(.horizontal) {
+                        HStack() {
+                            CategoryView(countryName: "아시아")
+                            CategoryView(countryName: "유럽")
+                            CategoryView(countryName: "북아메리카")
+                            CategoryView(countryName: "남아메리카")
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                    
                     Text("총 \(count)개국")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.horizontal, 16)
-                        .padding(.bottom, 12)
+                        .padding(.vertical, 12)
                         .font(Font.system(size: 12))
                         .foregroundColor(.g300)
                         
