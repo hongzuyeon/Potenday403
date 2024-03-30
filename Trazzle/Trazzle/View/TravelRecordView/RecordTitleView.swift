@@ -10,9 +10,6 @@ import SwiftUI
 struct RecordTitleView: View {
     
     var body: some View {
-        // test
-        let item = GridItem(.adaptive(minimum: 70), spacing: 8)
-        let columns = Array(repeating: item, count: 3)
         let cities: [String] = ["가나", "다라", "가나다라", "마바사아자차카","가나마바", "홀리호리리", "트레즐"]
         
         VStack {
@@ -29,14 +26,14 @@ struct RecordTitleView: View {
                 }
                 Spacer().frame(height: 18)
                     .frame(maxWidth: .infinity)
-            }.background(.pink)
-                .overlay {
-                    Image("magnet")
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 84, height: 84)
-                        .position(x: (UIScreen.main.bounds.width) / 2, y: 0)
-                }
+            }
+            .overlay {
+                Image("magnet")
+                    .scaledToFill()
+                    .clipped()
+                    .frame(width: 84, height: 84)
+                    .position(x: (UIScreen.main.bounds.width) / 2, y: 0)
+            }
             Spacer().frame(height: 8)
             // 다녀온 나라
             WrappedHStack(cities) { city in
@@ -52,7 +49,7 @@ struct RecordTitleView: View {
                     )
             }
             .padding([.leading, .trailing], 16)
-        }
+        }.background(.white)
     }
 }
 

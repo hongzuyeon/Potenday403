@@ -22,35 +22,41 @@ struct RecordDetailView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         // 사진 이미지 페이지
-                        HStack {
-                            Spacer()
-                            Text("1 / 6")
-                                .font(.system(size: 18, weight: .regular))
-                                .foregroundColor(.g300)
-                                .frame(alignment: .trailing)
-                        }
-                        .padding([.top, .trailing, .bottom], 16)
-                        // 사진 이미지
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHGrid(rows: rows, spacing: 8)  {
-                                ForEach(data, id: \.self) { i in
-                                    RecordImageCell()
-                                        .frame(width: getBgSize().width,
-                                               height: getBgSize().height)
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Text("1 / 6")
+                                    .font(.system(size: 18, weight: .regular))
+                                    .foregroundColor(.g300)
+                                    .frame(alignment: .trailing)
+                            }
+                            .padding([.top, .trailing, .bottom], 16)// 사진 이미지
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHGrid(rows: rows, spacing: 8)  {
+                                    ForEach(data, id: \.self) { i in
+                                        RecordImageCell()
+                                            .frame(width: getBgSize().width,
+                                                   height: getBgSize().height)
+                                    }
                                 }
                             }
+                            Spacer().frame(height: 48)
                         }
                         .padding(.leading, 20)
-                        Spacer().frame(height: 48)
+                        .background(Color.mapBgColor)
+                        
                         // 여행기 제목 헤더
                         RecordTitleView()
-                            .frame(height: 123)
+                        // 텍스트 뷰 (일단은...)
+                        ZStack {
+                            Text("가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바")
+                                .frame(maxWidth: .infinity)
+                                .padding([.leading, .trailing], 16)
+                        }
+                        .background(.white)
                     }
-                    
                 }
-                
-            }
-            .background(Color.mapBgColor)
+            }.background(VStack{ Color.mapBgColor ; Color.white })
         }
         .navigationTitle("내 여행").foregroundColor(.g900)
         .navigationBarBackButtonHidden(true)
