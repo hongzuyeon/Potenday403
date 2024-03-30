@@ -39,6 +39,11 @@ struct HomeView: View {
                     Spacer()
                     Button(action: {
                         print("floating button action")
+                        if LoginManager.shared.isLoggedIn {
+                            //CountryListView
+                        } else {
+                            //LoginView
+                        }
                     }, label: {
                         Image(systemName: "plus")
                             .resizable()

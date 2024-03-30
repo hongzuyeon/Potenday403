@@ -53,9 +53,6 @@ class Authorize: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationCon
         }
     }
     
-    func getToken() -> String {
-        return token
-    }
     
     func handleError(_ error: Error) {
         print("apple login error: \(error)")

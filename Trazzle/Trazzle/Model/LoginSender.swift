@@ -10,9 +10,6 @@ import Foundation
 class LoginSender {
     
     func sendData(url: String, accessToken: String, oauthProvider: String) {
-        print("url: \(url)")
-        print("accessToken: \(accessToken)")
-        print("oauthProvider: \(oauthProvider)")
         
         guard let url = URL(string: url) else {
             print("Invalid URL")
@@ -41,16 +38,17 @@ class LoginSender {
                 return
             }
 
-            /*
+            
             do {
-                let decodedResponse = try JSONDecoder().decode(response.self, from: data)
+                let decodedResponse : User = try JSONDecoder().decode(User.self, from: data)
                 DispatchQueue.main.async {
-                    self.responseMessage = decodedResponse.message
+                    print("decodedResponse User: \(decodedResponse)")
+                    LoginManager.shared.login(loginUser: decodedResponse)
                 }
             } catch {
                 print("Error decoding response: \(error)")
             }
-             */
+             
         }.resume()
     }
     
