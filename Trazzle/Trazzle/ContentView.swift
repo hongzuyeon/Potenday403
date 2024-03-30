@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         TabView {
             NavigationStack {
-                HomeView()
+                HomeView(titleText: .constant(TrazzleConstants.launchTitleText))
             }
             .tabItem {
                 Image("globe")
@@ -26,6 +27,10 @@ struct ContentView: View {
                     .renderingMode(.template)
                 Text("지도집")
             }
+            
+//            .toolbar(.hidden, for: .navigationBar)
+            .navigationBarBackButtonHidden(true)
+//            .toolbarBackground(Color.white60, for: .navigationBar)
             .toolbar(.visible, for: .tabBar)
             .toolbarBackground(Color.white, for: .tabBar)
         }
