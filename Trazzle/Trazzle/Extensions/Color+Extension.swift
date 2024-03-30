@@ -22,7 +22,11 @@ extension Color {
         return Color(hex: "#8ACCF6")
     }
     
-    static var highlightGreen: Color {
+    static var p500: Color {
+        return Color(hex: "19AE43")
+    }
+    
+    static var p900: Color {
         return Color(hex: "005D10")
     }
     

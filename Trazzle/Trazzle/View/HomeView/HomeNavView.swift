@@ -19,7 +19,7 @@ struct HomeNavView: View {
                 HStack(alignment: .center) {
                     Text(titleText)
                         .padding(.horizontal, 16)
-                        .foregroundColor(.highlightGreen)
+                        .foregroundColor(.p900)
                         .font(.system(size: 18))
                         .fontWeight(.semibold)
                         .frame(alignment: .center)

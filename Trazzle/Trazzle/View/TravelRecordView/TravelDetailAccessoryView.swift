@@ -2,7 +2,7 @@
 //  TravelDetailAccessoryView.swift
 //  Trazzle
 //
-//  Created by 연승주 on 3/30/24.
+//  Created by 홍주연 on 3/30/24.
 //
 
 import SwiftUI

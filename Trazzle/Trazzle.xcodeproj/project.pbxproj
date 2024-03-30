@@ -36,6 +36,9 @@
 		6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC523F62BB4487200B7C3D0 /* AppleButton.swift */; };
 		9969ED762BB7DB4A008C1B07 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969ED752BB7DB4A008C1B07 /* View+Extension.swift */; };
 		9969ED782BB7DE1A008C1B07 /* TravelDetailAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969ED772BB7DE1A008C1B07 /* TravelDetailAccessoryView.swift */; };
+		9969ED7A2BB7DFDF008C1B07 /* RecordTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969ED792BB7DFDF008C1B07 /* RecordTitleView.swift */; };
+		9969ED7C2BB7F0B8008C1B07 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969ED7B2BB7F0B8008C1B07 /* String+Extension.swift */; };
+		9969ED7E2BB7F23A008C1B07 /* WrappedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9969ED7D2BB7F23A008C1B07 /* WrappedHStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		6CC523F62BB4487200B7C3D0 /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		9969ED752BB7DB4A008C1B07 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		9969ED772BB7DE1A008C1B07 /* TravelDetailAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailAccessoryView.swift; sourceTree = "<group>"; };
+		9969ED792BB7DFDF008C1B07 /* RecordTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTitleView.swift; sourceTree = "<group>"; };
+		9969ED7B2BB7F0B8008C1B07 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9969ED7D2BB7F23A008C1B07 /* WrappedHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedHStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			children = (
 				9969ED752BB7DB4A008C1B07 /* View+Extension.swift */,
 				135AA9A12BB1CB8C00965EAA /* Color+Extension.swift */,
+				9969ED7B2BB7F0B8008C1B07 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				135AA9A72BB1DBEC00965EAA /* GeoJSONMapDrawer.swift */,
+				9969ED7D2BB7F23A008C1B07 /* WrappedHStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 				136E2E342BB7B88F00359B48 /* RecordDetailView.swift */,
 				9969ED772BB7DE1A008C1B07 /* TravelDetailAccessoryView.swift */,
 				136E2E3D2BB7C79800359B48 /* RecordImageCell.swift */,
+				9969ED792BB7DFDF008C1B07 /* RecordTitleView.swift */,
 			);
 			name = TravelRecordDetailView;
 			sourceTree = "<group>";
@@ -322,13 +331,16 @@
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
 				9969ED782BB7DE1A008C1B07 /* TravelDetailAccessoryView.swift in Sources */,
 				9969ED762BB7DB4A008C1B07 /* View+Extension.swift in Sources */,
+				9969ED7A2BB7DFDF008C1B07 /* RecordTitleView.swift in Sources */,
 				136E2E352BB7B88F00359B48 /* RecordDetailView.swift in Sources */,
 				136E2E382BB7BD0B00359B48 /* SettingView.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
+				9969ED7E2BB7F23A008C1B07 /* WrappedHStack.swift in Sources */,
 				136E2E3E2BB7C79800359B48 /* RecordImageCell.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
 				13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
+				9969ED7C2BB7F0B8008C1B07 /* String+Extension.swift in Sources */,
 				135AA98E2BB071EB00965EAA /* ContentView.swift in Sources */,
 				134A7B672BB700EA0006522F /* ProfileHeaderView.swift in Sources */,
 				6CC523F72BB4487200B7C3D0 /* AppleButton.swift in Sources */,

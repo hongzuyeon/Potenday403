@@ -21,6 +21,7 @@ struct RecordDetailView: View {
                 Spacer().frame(height: 52)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
+                        // 사진 이미지 페이지
                         HStack {
                             Spacer()
                             Text("1 / 6")
@@ -29,6 +30,7 @@ struct RecordDetailView: View {
                                 .frame(alignment: .trailing)
                         }
                         .padding([.top, .trailing, .bottom], 16)
+                        // 사진 이미지
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: rows, spacing: 8)  {
                                 ForEach(data, id: \.self) { i in
@@ -37,8 +39,12 @@ struct RecordDetailView: View {
                                                height: getBgSize().height)
                                 }
                             }
-                        }.padding(.leading, 20)
-                        
+                        }
+                        .padding(.leading, 20)
+                        Spacer().frame(height: 48)
+                        // 여행기 제목 헤더
+                        RecordTitleView()
+                            .frame(height: 123)
                     }
                     
                 }
