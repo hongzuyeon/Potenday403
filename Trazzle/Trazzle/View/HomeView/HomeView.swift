@@ -63,6 +63,7 @@ struct HomeView: View {
                     } else {
                         LoginView()
                             .navigationBarBackButtonHidden(true)
+                            .toolbar(.hidden, for: .tabBar)
                     }
                 }
             }
