@@ -11,10 +11,6 @@ struct RecordDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    // test
-    let data = Array(1...6).map { "\($0)"}
-    let rows = [GridItem(.flexible(maximum: 320))]
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -23,23 +19,8 @@ struct RecordDetailView: View {
                     VStack {
                         // 사진 이미지 페이지
                         VStack {
-                            HStack {
-                                Spacer()
-                                Text("1 / 6")
-                                    .font(.system(size: 18, weight: .regular))
-                                    .foregroundColor(.g300)
-                                    .frame(alignment: .trailing)
-                            }
-                            .padding([.top, .trailing, .bottom], 16)// 사진 이미지
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                LazyHGrid(rows: rows, spacing: 8)  {
-                                    ForEach(data, id: \.self) { i in
-                                        RecordImageCell()
-                                            .frame(width: getBgSize().width,
-                                                   height: getBgSize().height)
-                                    }
-                                }
-                            }
+                            RecordImageSlideView()
+                                .frame(height: getBgSize().height)
                             Spacer().frame(height: 48)
                         }
                         .padding(.leading, 20)
