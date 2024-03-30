@@ -446,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.potenday.trazzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Trazzle Debug";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = trazzle_development;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -484,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.potenday.trazzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Trazzle Release";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Trazzle_appstore_connect;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

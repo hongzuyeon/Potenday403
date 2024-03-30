@@ -15,31 +15,43 @@ struct TravelRecordCollectionView: View {
     
     
     var body: some View {
-        ZStack {
-            Color.mapBgColor.ignoresSafeArea()
-            VStack {
-                ZStack {
-                    ProfileHeaderView()
-                }.background(.white)
-                
-                Spacer()
-                
-                // grid
-                ScrollView(showsIndicators: false) {
-                    LazyVGrid(columns: columns, spacing: 7)  {
-                        ForEach(data, id: \.self) { i in
-                            VStack {
-                                TravelRecordCell()
+        NavigationView {
+            ZStack {
+                Color.mapBgColor.ignoresSafeArea()
+                VStack {
+                    ZStack {
+                        ProfileHeaderView()
+                    }.background(.white)
+                    
+                    Spacer()
+                    
+                    // grid
+                    ScrollView(showsIndicators: false) {
+                        LazyVGrid(columns: columns, spacing: 7)  {
+                            ForEach(data, id: \.self) { i in
+                                VStack {
+                                    TravelRecordCell()
+                                }
+                                .background(.white)
                             }
-                            .background(.white)
                         }
+    //                    .frame(height: .infinity)
+                        .padding(.top, 8)
                     }
-//                    .frame(height: .infinity)
-                    .padding(.top, 8)
+                    .padding([.leading, .trailing], 16)
                 }
-                .padding([.leading, .trailing], 16)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    Button(
+                        action: {
+                        print("setting button click")
+                    }, label: {
+                        Image(systemName: "gearshape")
+                            .foregroundColor(.black)
+                    })
+                    .padding(.trailing, 4)
+                }
             }
-            
         }
     }
 }
