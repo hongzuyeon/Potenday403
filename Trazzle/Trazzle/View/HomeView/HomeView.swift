@@ -110,16 +110,16 @@ struct HomeView: View {
             //            }
         }
         // MARK: - 통계뷰
-        .safeAreaInset(edge: .top) {
-            VStack {
-                Spacer().frame(height: 52 + (TrazzleApplication.getNotchHeight() ?? 0))
-                CountryStatisticView()
-                    .frame(height: 109)
-                    .hide(if: !isShowingCountryStatisticsView)
-                    .background(Color.white60)
-            }
-            
-        }
+//        .safeAreaInset(edge: .top) {
+//            VStack {
+//                Spacer().frame(height: 52 + (TrazzleApplication.getNotchHeight() ?? 0))
+//                CountryStatisticView()
+//                    .frame(height: 109)
+//                    .hide(if: !isShowingCountryStatisticsView)
+//                    .background(Color.white60)
+//            }
+//            
+//        }
     }
 }
 
