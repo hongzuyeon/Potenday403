@@ -54,6 +54,7 @@ struct TravelRecordCollectionView: View {
                             })
                     }
                 }
+                .tint(.black)
             }
         }
     }

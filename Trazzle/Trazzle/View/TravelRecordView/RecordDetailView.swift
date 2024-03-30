@@ -13,13 +13,13 @@ struct RecordDetailView: View {
     
     // test
     let data = Array(1...6).map { "\($0)"}
-    let rows = [GridItem(.adaptive(minimum: 320))]
+    let rows = [GridItem(.flexible(maximum: 320))]
     
     var body: some View {
         NavigationView {
             VStack {
                 Spacer().frame(height: 52)
-                ScrollView(showsIndicators: false) {
+                ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         HStack {
                             Spacer()
@@ -29,13 +29,17 @@ struct RecordDetailView: View {
                                 .frame(alignment: .trailing)
                         }
                         .padding([.top, .trailing, .bottom], 16)
-                        LazyHGrid(rows: rows, spacing: 8)  {
-                            ForEach(data, id: \.self) { i in
-                                RecordImageCell()
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHGrid(rows: rows, spacing: 8)  {
+                                ForEach(data, id: \.self) { i in
+                                    RecordImageCell()
+                                        .frame(width: getBgSize().width,
+                                               height: getBgSize().height)
+                                }
                             }
-                        }
+                        }.padding(.leading, 20)
+                        
                     }
-                    
                     
                 }
                 
@@ -62,39 +66,27 @@ struct RecordDetailView: View {
             }
         }
         .safeAreaInset(edge: .top) {
-            AccessoryView()
+            TravelDetailAccessoryView(name: "김철수", image: "book")
                 .frame(height: 52)
         }
+    }
+}
+
+extension RecordDetailView {
+    func getBgSize() -> CGSize {
+        let width = UIScreen.main.bounds.width - 14 - 14
+        let height = getImageSize().height + 12 + 76
+        return CGSize(width: width, height: height)
+    }
+    
+    func getImageSize() -> CGSize {
+        let width = UIScreen.main.bounds.width - 34 - 46
+        return CGSize(width: width, height: width)
     }
 }
 
 struct RecordDetailView_Previews: PreviewProvider {
     static var previews: some View {
         RecordDetailView()
-    }
-}
-
-struct AccessoryView: View {
-    var body: some View {
-        HStack(alignment: .center) {
-            Image("book")
-                .resizable()
-                .scaledToFit()
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.homeBgColor,
-                                         lineWidth: 1))
-                .frame(width: 32, height: 32)
-                .padding(.trailing, 8)
-            Text("김철수")
-                .foregroundColor(.g900)
-                .font(.system(size: 18, weight: .semibold))
-            Spacer()
-        }
-        .padding(.leading, 16)
-        .padding([.top, .bottom], 10)
-        //
-        .background(Color(uiColor: .systemGroupedBackground))
-        .buttonStyle(.bordered)
-        .controlSize(.mini)
     }
 }

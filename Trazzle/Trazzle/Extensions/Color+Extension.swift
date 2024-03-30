@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color { 
+extension Color {
     
     // Colors
     static var mainGreen: Color {
