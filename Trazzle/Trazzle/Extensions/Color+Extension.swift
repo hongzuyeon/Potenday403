@@ -38,6 +38,18 @@ extension Color {
         return Color(hex: "FDFDFD")
     }
     
+    static var grayShadow: Color {
+        return Color("F2F4F5")
+    }
+    
+    static var g50: Color {
+        return Color(hex: "D9D9D9")
+    }
+    
+    static var g300: Color {
+        return Color(hex: "A2A9AD")
+    }
+    
     static var g400: Color {
         return Color(hex: "878D96")
     }

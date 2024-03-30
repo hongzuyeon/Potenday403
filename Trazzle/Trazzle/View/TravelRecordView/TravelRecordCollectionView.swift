@@ -30,32 +30,34 @@ struct TravelRecordCollectionView: View {
                         LazyVGrid(columns: columns, spacing: 7)  {
                             ForEach(data, id: \.self) { i in
                                 VStack {
-                                    TravelRecordCell()
+                                    NavigationLink(
+                                        destination: RecordDetailView()) {
+                                        TravelRecordCell()}
                                 }
                                 .background(.white)
                             }
                         }
-    //                    .frame(height: .infinity)
                         .padding(.top, 8)
                     }
                     .padding([.leading, .trailing], 16)
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    Button(
-                        action: {
-                        print("setting button click")
-                    }, label: {
-                        Image(systemName: "gearshape")
-                            .foregroundColor(.black)
-                    })
-                    .padding(.trailing, 4)
+                    ToolbarItem {
+                        NavigationLink(
+                            destination: {
+                                SettingView() },
+                            label: {
+                                Label("Settings", systemImage: "gearshape")
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 4)
+                            })
+                    }
                 }
             }
         }
     }
 }
-
 struct MapCollectionView_Previews: PreviewProvider {
     static var previews: some View {
         TravelRecordCollectionView()

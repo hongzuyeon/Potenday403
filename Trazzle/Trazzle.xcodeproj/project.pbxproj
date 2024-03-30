@@ -20,6 +20,9 @@
 		135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */; };
 		135AA9B12BB1E15600965EAA /* world.json in Resources */ = {isa = PBXBuildFile; fileRef = 135AA9B02BB1E15600965EAA /* world.json */; };
 		136619932BB71EE200C5C76F /* TravelRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136619922BB71EE200C5C76F /* TravelRecordCell.swift */; };
+		136E2E352BB7B88F00359B48 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E2E342BB7B88F00359B48 /* RecordDetailView.swift */; };
+		136E2E382BB7BD0B00359B48 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E2E372BB7BD0B00359B48 /* SettingView.swift */; };
+		136E2E3E2BB7C79800359B48 /* RecordImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136E2E3D2BB7C79800359B48 /* RecordImageCell.swift */; };
 		13DF06F62BB5D5C900DA4EE8 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06F52BB5D5C900DA4EE8 /* View+Extension.swift */; };
 		13DF06F82BB5D63400DA4EE8 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06F72BB5D63400DA4EE8 /* HomeNavView.swift */; };
 		13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF06FB2BB5D69800DA4EE8 /* CountryStatisticView.swift */; };
@@ -48,6 +51,9 @@
 		135AA9AA2BB1DCAD00965EAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		135AA9B02BB1E15600965EAA /* world.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world.json; sourceTree = "<group>"; };
 		136619922BB71EE200C5C76F /* TravelRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordCell.swift; sourceTree = "<group>"; };
+		136E2E342BB7B88F00359B48 /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		136E2E372BB7BD0B00359B48 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		136E2E3D2BB7C79800359B48 /* RecordImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordImageCell.swift; sourceTree = "<group>"; };
 		13DF06F52BB5D5C900DA4EE8 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "View+Extension.swift"; path = "../../../../../Desktop/Trazzle/Extensions/View+Extension.swift"; sourceTree = "<group>"; };
 		13DF06F72BB5D63400DA4EE8 /* HomeNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
 		13DF06FB2BB5D69800DA4EE8 /* CountryStatisticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryStatisticView.swift; sourceTree = "<group>"; };
@@ -121,7 +127,8 @@
 				6C2A5E402BB2B82B00E224BC /* LoginView */,
 				135AA9AC2BB1E10E00965EAA /* HomeView */,
 				13DF06FA2BB5D68300DA4EE8 /* CountryStatisticView */,
-				135AA9AD2BB1E11C00965EAA /* TravelRecordCollectionView */,
+				135AA9AD2BB1E11C00965EAA /* TravelRecordView */,
+				136E2E362BB7BCF800359B48 /* SettingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,14 +167,13 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
-		135AA9AD2BB1E11C00965EAA /* TravelRecordCollectionView */ = {
+		135AA9AD2BB1E11C00965EAA /* TravelRecordView */ = {
 			isa = PBXGroup;
 			children = (
-				136619922BB71EE200C5C76F /* TravelRecordCell.swift */,
-				134A7B662BB700EA0006522F /* ProfileHeaderView.swift */,
-				135AA99D2BB0876E00965EAA /* TravelRecordCollectionView.swift */,
+				136E2E3B2BB7C76500359B48 /* TravelRecordCollectionView */,
+				136E2E3C2BB7C76F00359B48 /* TravelRecordDetailView */,
 			);
-			path = TravelRecordCollectionView;
+			path = TravelRecordView;
 			sourceTree = "<group>";
 		};
 		135AA9AF2BB1E13F00965EAA /* resources */ = {
@@ -177,6 +183,33 @@
 				135AA98F2BB071ED00965EAA /* Assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		136E2E362BB7BCF800359B48 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				136E2E372BB7BD0B00359B48 /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		136E2E3B2BB7C76500359B48 /* TravelRecordCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				135AA99D2BB0876E00965EAA /* TravelRecordCollectionView.swift */,
+				134A7B662BB700EA0006522F /* ProfileHeaderView.swift */,
+				136619922BB71EE200C5C76F /* TravelRecordCell.swift */,
+			);
+			name = TravelRecordCollectionView;
+			sourceTree = "<group>";
+		};
+		136E2E3C2BB7C76F00359B48 /* TravelRecordDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				136E2E342BB7B88F00359B48 /* RecordDetailView.swift */,
+				136E2E3D2BB7C79800359B48 /* RecordImageCell.swift */,
+			);
+			name = TravelRecordDetailView;
 			sourceTree = "<group>";
 		};
 		13DF06FA2BB5D68300DA4EE8 /* CountryStatisticView */ = {
@@ -284,7 +317,10 @@
 			files = (
 				6C90AD962BB2FF2700C4C411 /* GoogleButton.swift in Sources */,
 				135AA9A82BB1DBEC00965EAA /* GeoJSONMapDrawer.swift in Sources */,
+				136E2E352BB7B88F00359B48 /* RecordDetailView.swift in Sources */,
+				136E2E382BB7BD0B00359B48 /* SettingView.swift in Sources */,
 				135AA99A2BB0872800965EAA /* HomeView.swift in Sources */,
+				136E2E3E2BB7C79800359B48 /* RecordImageCell.swift in Sources */,
 				135AA9A22BB1CB8C00965EAA /* Color+Extension.swift in Sources */,
 				13DF06FC2BB5D69800DA4EE8 /* CountryStatisticView.swift in Sources */,
 				135AA9AB2BB1DCAD00965EAA /* HomeViewModel.swift in Sources */,
