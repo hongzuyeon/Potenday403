@@ -70,6 +70,10 @@ extension Color {
         return Color(hex: "697074")
     }
     
+    static var white60: Color {
+        return Color.white.opacity(0.6)
+    }
+    
 }
 
 extension Color {
