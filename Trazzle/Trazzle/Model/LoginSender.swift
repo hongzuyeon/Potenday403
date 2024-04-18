@@ -8,6 +8,7 @@
 import Foundation
 
 class LoginSender {
+    weak var delegate: DispatchCompletionDelegate?
     
     func sendData(url: String, accessToken: String, oauthProvider: String) {
         
@@ -44,6 +45,8 @@ class LoginSender {
                 DispatchQueue.main.async {
                     print("decodedResponse User: \(decodedResponse)")
                     LoginManager.shared.login(loginUser: decodedResponse)
+                    
+                    self.delegate?.dispatchQueueDidFinishTask()
                 }
             } catch {
                 print("Error decoding response: \(error)")

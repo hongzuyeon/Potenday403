@@ -12,9 +12,16 @@ struct HomeView: View {
     
     var homeVM = HomeViewModel.shared
     @State var navTitle: String = "MY Travel"
+    @State var isShowing = false
+    @State var tag:Int? = nil
     
     var body: some View {
         ZStack{
+            NavigationLink(destination: CountryListView(), tag: 1, selection: self.$tag ) {
+                      EmptyView()
+                    }
+            
+            
             ScrollView([.horizontal],
                        showsIndicators: false) {
                 Canvas(rendersAsynchronously: true) { context, size in
@@ -39,11 +46,13 @@ struct HomeView: View {
                     Spacer()
                     Button(action: {
                         print("floating button action")
+                        
                         if LoginManager.shared.isLoggedIn {
-                            //CountryListView
+                            self.tag = 1
                         } else {
-                            //LoginView
+                            self.isShowing.toggle()
                         }
+                        
                     }, label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -56,6 +65,9 @@ struct HomeView: View {
                     .foregroundColor(.white)
                     .clipShape(Circle())
                     .shadow(radius: 4, x: 0 , y: 4)
+                    .fullScreenCover(isPresented: $isShowing) {
+                        LoginView()
+                    }
                     
                     Spacer().frame(width: 16)
                 }

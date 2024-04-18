@@ -10,7 +10,6 @@ import GoogleSignIn
 import GoogleSignInSwift
 
 struct GoogleButton: View {
-    
     // GoogleSignInButtonViewModel 인스턴스 생성
     let viewModel = GoogleSignInButtonViewModel()
     let loginSender = LoginSender()

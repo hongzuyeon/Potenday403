@@ -9,7 +9,9 @@ import SwiftUI
 import GoogleSignInSwift
 import GoogleSignIn
 
-struct LoginView: View {
+struct LoginView: View, DispatchCompletionDelegate {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack(alignment: .top) {
             
@@ -23,9 +25,9 @@ struct LoginView: View {
             
             VStack {
                 Spacer()
-                KakaoButton()
-                GoogleButton()
-                AppleButton()
+                KakaoButton(delegate: self)
+                GoogleButton(delegate: self)
+                AppleButton(delegate: self)
                 
                 Text("로그인 및 회원가입시, 아래 내용에 동의하는 것으로 간주됩니다.")
                     .foregroundColor(.g400)
@@ -45,12 +47,10 @@ struct LoginView: View {
             
         }
     }
-}
-
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
+    
+    func dispatchQueueDidFinishTask() {
+            print("DispatchQueue 작업이 완료되었습니다.")
+            dismiss()
+        }
 }
 
